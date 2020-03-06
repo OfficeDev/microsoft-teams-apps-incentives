@@ -47,6 +47,7 @@ Add-PnPField -List "Incentives" -DisplayName "Attachments" -InternalName "Attach
 Add-PnPField -List "Incentives" -DisplayName "IsIncentiveLive" -InternalName "IsIncentiveLive" -Type Boolean -AddToDefaultView
 
 
+
 #Creates a new list for Rewards
 New-PnPList -Title 'Rewards' -Template GenericList -Url Lists/Rewards -ErrorAction Continue
 
@@ -63,6 +64,7 @@ Add-PnPField -List "Rewards" -DisplayName "UpdatedOn" -InternalName "UpdatedOn" 
 #Need to click on add column inside list and goto Show/hide columns and make Attachments visible
 Add-PnPField -List "Rewards" -DisplayName "Attachments" -InternalName "Attachments" -Type Attachments -AddToDefaultView
 
+
 #Creates a new list for UserIncentives
 New-PnPList -Title 'UserIncentives' -Template GenericList -Url Lists/UserIncentives -ErrorAction Continue
 
@@ -76,6 +78,7 @@ Add-PnPField -List "UserIncentives" -DisplayName "IncentiveCode" -InternalName "
 Add-PnPField -List "UserIncentives" -DisplayName "ReceivedOn" -InternalName "ReceivedOn" -Type DateTime -AddToDefaultView
 Add-PnPField -List "UserIncentives" -DisplayName "ReasonForEdit" -InternalName "ReasonForEdit" -Type Text -AddToDefaultView
 
+
 #Creates a new list for UserRewards
 New-PnPList -Title 'UserRewards' -Template GenericList -Url Lists/UserRewards -ErrorAction Continue
 
@@ -88,5 +91,5 @@ Add-PnPField -List "UserRewards" -DisplayName "Status" -InternalName "Status" -T
 Add-PnPField -List "UserRewards" -DisplayName "VoucherCode" -InternalName "VoucherCode" -Type Text -AddToDefaultView
 Add-PnPField -List "UserRewards" -DisplayName "CreatedOn" -InternalName "CreatedOn" -Type DateTime -AddToDefaultView
 
-#Close  connection
+#Closes the connection
 Disconnect-PnPOnline
