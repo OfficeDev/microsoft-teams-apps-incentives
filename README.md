@@ -1,4 +1,3 @@
-﻿
 ---
 page_type: sample
 languages:
@@ -38,19 +37,21 @@ This is the app landing page that is displayed to the users once they login to t
 4. **Your progress**: Shows metrics related to user's current progress like Accumulated points, No of rewards collected etc.  
 5. **Activities with incentives**: Shows the list of activities which are currently running and active.
 
-<<ToDo>> Placeholder for mockup of Home screen
+![App Home screen](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Images/Incentives_Home.png)
 
 **Admin**
 
 Before the apps can be used by end users, Admins will have to log in to the app and create activities and rewards. They will log in to the app and navigate to the Admin module through a link at the top of the landing page.
 
-The admin page will have the following tabs:
+The admin module will have the following tabs:
 1. **Update activities**: Add and edit activities 
 2. **Update rewards**: Add and edit rewards
 3. **Approve rewards**: Approve reward requests from users and assign voucher codes
 4. **Adjust points**: Manually add or remove points for a user. For e.g.: Admins can adjust points for a user if they find out that the user has not completed an activity but has marked it as complete in the App.   
 
 Admins can navigate back to the home page at any point. They will be able to perform all the activities that an end user can perform. Please note that the voucher codes are created outside the scope of the app. It is assumed that the Admins keep a list of such codes to track the usage of the total budget/reward pool. The app will accept any codes the admin chooses to enter.
+
+![App Admin screen](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Images/Incentives_Admin.png)
 
 ## Legal Notice
 Please read the license terms applicable to this app template [here](https://github.com/OfficeDev/microsoft-teams-apps-incentives/blob/master/LICENSE). In addition to these terms, by using this app template you agree to the following:
