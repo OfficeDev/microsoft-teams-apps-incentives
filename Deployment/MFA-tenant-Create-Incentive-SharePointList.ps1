@@ -1,31 +1,17 @@
-﻿param([string]$siteurl,[string]$baseurl,[string]$sitename)
+﻿##############################################################
 
-#Making sure the user has this Package installed.
-Install-Module SharePointPnPPowerShellOnline
+#### for MFA Tenant use ####
 
-#Getting credentials of user to login into given sharepoint site
-$usercredential = Get-Credential
+## fill this 2 parameter below
 
-#When user enters only 1 param and that param is $siteurl then it adds the list inside that site url
-if(($psboundparameters.Count -eq 1) -and $siteurl ){
+$siteurl ="https://m365x129757.sharepoint.com/"
+$sitename ="Incentives"
 
-#Connects to the sharepoint site URL
-Connect-PnPOnline -Url $siteurl -Credentials $usercredential
-}
 
-#when user enters 2 params and those 2 are baseurl and sitename then it will create the SharePoint site using SP base URL
-if(($psboundparameters.Count -eq 2) -and ($baseurl) -and $sitename){
+Connect-PnPOnline -Url $siteurl -SPOManagementShell -ClearTokenCache
+$incentivesiteurl = New-PnPSite -Type TeamSite -Title $sitename -Alias $sitename 
+Connect-PnPOnline -Url $incentivesiteurl -UseWebLogin 
 
-#Connects to the sharepoint base URL
-Connect-PnPOnline -Url $baseurl -Credentials $usercredential
-
-#Creates the Data Store Incentives App 
-#Title and alias for new site needs to be unique
-$incentivesiteurl = New-PnPSite -Type TeamSite -Title $sitename -Alias $sitename
-
-#Switchs to the newly created site
-Connect-PnPOnline -Url $incentivesiteurl -Credentials $usercredential
-}
 
 #Creates a new list for Incentives
 New-PnPList -Title 'Incentives' -Template GenericList -Url Lists/Incentives -ErrorAction Continue
