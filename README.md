@@ -8,7 +8,7 @@ urlFragment: microsoft-teams-apps-incentives
 
 
 **Incentives App Template**
-| [Documentation](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Solution-overview) | [Deployment guide](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Deployement-guide) | [Architecture](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Solution-overview) |
+| [Documentation](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Solution-overview) | [Deployment guide](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Deployment-guide) | [Architecture](https://github.com/OfficeDev/microsoft-teams-apps-incentives/wiki/Solution-overview) |
 | ---- | ---- | ---- |
 
 Incentives is a Teams Power Apps app template designed to incentivize and track participation in training and other adoption and change management initiatives.
